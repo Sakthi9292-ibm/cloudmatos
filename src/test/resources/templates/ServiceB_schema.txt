@@ -1,0 +1,9 @@
+{
+    "serviceBRequest": {
+        "inputA": 1,
+        "inputB": 3,
+        "operation": {
+            "op": "string"
+        }
+    }
+}

@@ -1,0 +1,135 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-05-28T06:58:43.169Z",
+        "before": [
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.WebPage_Login_Page.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Test case for GET API",
+        "description": "",
+        "id": "rest-api-validation;test-case-for-get-api",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.WebPage_Login_Page.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 54000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Client system is pointing to \"https://reqres.in/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://reqres.in/\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepdefinitions.RestStepDef.client_system_is_pointing_to(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1874000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Client triggers the request to get service \"api/users?page\" with id \"2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"api/users?page\"",
+                  "offset": 43
+                },
+                {
+                  "val": "\"2\"",
+                  "offset": 68
+                }
+              ],
+              "location": "stepdefinitions.RestStepDef.client_triggers_the_request_to_get_service_with_id(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat testutils.RestAPI.getData(RestAPI.java:117)\r\n\tat stepdefinitions.RestStepDef.server_should_respond_with_and_values(RestStepDef.java:59)\r\n\tat ✽.Server should respond with \"200\" and values(file:///C:/Users/SakthivelSundaram/Desktop/personal/svisa/Linkfire/QA_Assignment/src/test/resources/features/REST.feature:7)\r\n",
+              "duration": 362000000,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "Server should respond with \"200\" and values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepdefinitions.RestStepDef.server_should_respond_with_and_values(java.lang.String,io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "jsonpath",
+                  "values"
+                ]
+              },
+              {
+                "cells": [
+                  "\"data\"",
+                  "\"2\""
+                ]
+              },
+              {
+                "cells": [
+                  "\"data.email\"",
+                  "\"janet.weaver@reqres.in\""
+                ]
+              },
+              {
+                "cells": [
+                  "\"data.first_name\"",
+                  "\"Janet\""
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@API"
+          }
+        ]
+      }
+    ],
+    "name": "Rest API Validation",
+    "description": "",
+    "id": "rest-api-validation",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/REST.feature",
+    "tags": []
+  }
+]
